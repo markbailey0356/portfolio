@@ -5,6 +5,8 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 
+import "@/tailwind.css";
+
 new Vue({
   router,
   store,
