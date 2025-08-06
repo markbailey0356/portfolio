@@ -1,0 +1,63 @@
+*, *::before, * after {
+    box-sizing: border-box;
+}
+
+html {
+    --black: #282c34;
+    --red: #e06c75;
+    --green: #98c379;
+    --yellow: #e5c07b;
+    --blue: #61afef;
+    --magenta: #c678dd;
+    --cyan: #56b6c2;
+    --white: #dcdfe4;
+    --light: #dcdfe4;
+    --dark: #282c34;
+
+	--foreground: var(--light);
+	--background: var(--dark);
+
+    --p0: 1rem;
+    --p-1: 0.8rem;
+    --p-2: 0.64rem;
+    --p-3: 0.5rem;
+    --p-4: 0.4rem;
+    --p-5: 0.325rem;
+    --p-6: 0.25rem;
+    --p1: 1.25rem;
+    --p2: 1.5rem;
+    --p3: 2rem;
+    --p4: 2.5rem;
+    --p5: 3rem;
+    --p6: 3.75rem;
+
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Google Sans Code", monospace;
+	line-height: 1.5;
+
+	@media (prefers-color-scheme: light) {
+		--foreground: var(--dark);
+		--background: var(--light);
+	}
+}
+
+
+body {
+	margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
