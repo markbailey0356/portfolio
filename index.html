@@ -7,7 +7,8 @@
 		<title>Mark Bailey</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=block" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Noto+Color+Emoji&display=block" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=block" rel="stylesheet"> -->
 		<link rel="stylesheet" href="/base.css" />
 		<link rel="stylesheet" href="/index.css" />
 	</head>
@@ -17,6 +18,11 @@
 			<h2>Software Developer</h2>
 			<h3>Adelaide, Australia</h3>
 		</main>
+		<aside>
+			<div id="goose-message" style="display: none">get back to work</div>
+			<button id="goose-button" onclick="document.getElementById('goose-message').style.display = ''">🪿</button>
+		</aside>
+
 		<style>
 			html, body, main {
 				display: grid;
@@ -41,6 +47,22 @@
 				}
 				h3 {
 					font-size: var(--p0);
+				}
+			}
+
+			aside {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: flex;
+
+				button {
+					padding: 0;
+					background: none;
+					border: none;
+					font: inherit;
+					cursor: pointer;
+					font-size: var(--p2);
 				}
 			}
 		</style>
