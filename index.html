@@ -13,15 +13,94 @@
 		<link rel="stylesheet" href="/index.css" />
 	</head>
 	<body>
-		<main>
-			<h1>Mark Bailey</h1>	
-			<h2>Software Developer</h2>
-			<h3>Adelaide, Australia</h3>
-		</main>
-		<aside>
-			<div id="goose-message" style="display: none">get back to work</div>
-			<button id="goose-button" onclick="document.getElementById('goose-message').style.display = ''">🪿</button>
-		</aside>
+		<section>
+			<div>
+				<h1>Mark Bailey</h1>	
+				<h2>Software Developer</h2>
+				<h3>Adelaide, Australia</h3>
+			</div>
+			<div style="margin-top: 2rem" class="technologies">
+				<article>
+					<h3>Technologies I ❤️ to use</h3>
+					<ul>
+						<li>
+							<img src="/technologies/logo-vue.svg">
+							Vue
+						</li>
+						<li>
+							<img src="/technologies/logo-vite.svg">
+							Vite
+						</li>
+						<li>
+							<img src="/technologies/logo-ts.svg">
+							Typescript
+						</li>
+						<li>
+							<img src="/technologies/logo-laravel.svg">
+							Laravel
+						</li>
+						<li>
+							<img src="/technologies/logo-php.svg">
+							PHP
+						</li>
+						<li>
+							<img src="/technologies/logo-go.svg">
+							Go
+						</li>
+						<li>
+							<img src="/technologies/logo-c.svg">
+							C
+						</li>
+						<li>
+							<img src="/technologies/logo-raylib.png">
+							Raylib
+						</li>
+						<li>
+							<img src="/technologies/logo-unity.svg">
+							Unity
+						</li>
+						<li>
+							<img src="/technologies/logo-threejs.svg">
+							Three.js
+						</li>
+						<li>
+							<img src="/technologies/logo-webgl.svg">
+							WebGL
+						</li>
+						<li>
+							<img src="/technologies/logo-neovim.svg">
+							Neovim
+						</li>
+					</ul>
+				</article>
+				<article>
+
+					<h3>Technologies I'd ❤️ to learn</h3>
+					<ul>
+						<li>
+							<img src="/technologies/logo-astro.svg">
+							Astro
+						</li>
+						<li>
+							<img src="/technologies/logo-postgres.svg">
+							Postgres
+						</li>
+						<li>
+							<img src="/technologies/logo-odin.svg">
+							Odin
+						</li>
+						<li>
+							<img src="/technologies/logo-github.svg">
+							Github Actions
+						</li>
+						<li>
+							<img src="/technologies/logo-arch.svg">
+							Arch Linux
+						</li>
+					</ul>
+				</article>
+			</div>
+		</section>
 
 		<style>
 			html, body, main {
@@ -29,7 +108,11 @@
 				height: 100%;
 			}
 
-			main {
+			body {
+				padding: var(--p2);
+			}
+
+			section {
 				place-content: center;
 				text-align: center;
 
@@ -50,19 +133,53 @@
 				}
 			}
 
-			aside {
-				position: absolute;
-				top: 0;
-				right: 0;
+			.technologies {
 				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: var(--p3);
 
-				button {
-					padding: 0;
-					background: none;
-					border: none;
-					font: inherit;
-					cursor: pointer;
-					font-size: var(--p2);
+				article {
+					border: 2px dashed;
+					padding: var(--p0) var(--p2);
+
+					position: relative;
+
+					h3 {
+						position: absolute;
+						top: -0.5em;
+						left: var(--p0);
+						line-height: 1;
+
+						background-color: var(--background);
+						padding-inline: var(--p0);
+					}
+				}
+
+				ul {
+					display: flex;
+					align-items: flex-start;
+					justify-content: center;
+					flex-wrap: wrap;
+					gap: var(--p2);
+					--size: 4rem;
+
+					li {
+						flex-basis: var(--size);
+
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						font-size: var(--p-2);
+						gap: var(--p-4);
+						line-height: 1.2;
+					}
+
+					img {
+						width: var(--size);
+						height: var(--size);
+						object-fit: contain;
+					}
 				}
 			}
 		</style>
